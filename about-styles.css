@@ -1,0 +1,483 @@
+ /* CSS变量定义 */
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #7c3aed;
+    --accent-color: #06b6d4;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.15);
+    --transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --border-radius: 20px;
+  }
+  
+  /* 基础样式 */
+  body {
+    font-family: 'Noto Serif SC', serif;
+    line-height: 1.8;
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+  
+  /* 页面加载动画 */
+  body {
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 英雄区域 */
+  .hero-section {
+    padding: 4rem 0 6rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(79, 70, 229, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+    z-index: -1;
+  }
+  
+  .hero-avatar {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    z-index: 2;
+    transition: var(--transition);
+  }
+  
+  .hero-image:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: var(--card-shadow-hover);
+  }
+  
+  .hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: var(--bg-gradient);
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.3;
+    animation: pulse 3s ease-in-out infinite;
+    z-index: 1;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.5; }
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: var(--bg-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    animation: slideInUp 1s ease 0.3s both;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    animation: slideInUp 1s ease 0.5s both;
+  }
+  
+  .hero-quote {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideInUp 1s ease 0.7s both;
+  }
+  
+  /* 时间线样式 */
+  .timeline-section {
+    padding: 6rem 0;
+    position: relative;
+  }
+  
+  .timeline-section::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--bg-gradient);
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    background: var(--bg-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--bg-gradient);
+    border-radius: 2px;
+  }
+  
+  .timeline-container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: var(--transition);
+  }
+  
+  .timeline-item:nth-child(odd) {
+    flex-direction: row;
+  }
+  
+  .timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .timeline-item.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .timeline-marker {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    z-index: 3;
+    flex-shrink: 0;
+    margin: 0 2rem;
+  }
+  
+  .timeline-marker::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: var(--bg-gradient);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: ripple 2s infinite;
+  }
+  
+  @keyframes ripple {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+    100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+  }
+  
+  .timeline-content {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    position: relative;
+    transition: var(--transition);
+  }
+  
+  .timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+  }
+  
+  .timeline-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .timeline-text {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  
+  .timeline-quote {
+    font-style: italic;
+    color: var(--accent-color);
+    font-weight: 600;
+    padding: 1rem;
+    background: rgba(6, 182, 212, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-color);
+  }
+  
+  .highlight {
+    color: var(--primary-color);
+    font-weight: 700;
+    background: linear-gradient(120deg, rgba(79, 70, 229, 0.1) 0%, rgba(79, 70, 229, 0.1) 100%);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+  
+  /* 信念卡片 */
+  .beliefs-section {
+    padding: 6rem 0;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  .beliefs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .belief-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: var(--transition);
+    opacity: 0;
+    transform: scale(0.8);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .belief-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--bg-gradient);
+  }
+  
+  .belief-card.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .belief-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--card-shadow-hover);
+  }
+  
+  .belief-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 2rem;
+    transition: var(--transition);
+  }
+  
+  .belief-card:hover .belief-icon {
+    transform: rotate(360deg) scale(1.1);
+  }
+  
+  .belief-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .belief-text {
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+  
+  /* 联系方式 */
+  .contact-section {
+    padding: 6rem 0;
+  }
+  
+  .contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: var(--transition);
+    min-width: 120px;
+  }
+  
+  .contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+    color: var(--primary-color);
+  }
+  
+  .contact-item i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+  }
+  
+  .contact-item:hover i {
+    transform: scale(1.2);
+  }
+  
+  /* 动画类 */
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .hero-image {
+      width: 120px;
+      height: 120px;
+    }
+    
+    .timeline-section::before {
+      left: 2rem;
+    }
+    
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .timeline-marker {
+      margin: 1rem 0;
+    }
+    
+    .beliefs-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .contact-item {
+      width: 200px;
+    }
+  }
+  
+  /* 滚动条样式 */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-gradient);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+  }

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>明阳的数字花园</title>
+  <!-- Tailwind CSS v2.2.19 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome v6.0.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Noto Serif SC 字体 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-serif min-h-screen flex flex-col" style="font-family: 'Noto Serif SC', serif;">
+  <!-- 顶部导航栏 -->
+  <header class="fixed top-0 left-0 w-full z-30 bg-white bg-opacity-90 shadow-sm border-b border-gray-100">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center space-x-2">
+        <span class="text-2xl font-bold tracking-wide text-indigo-700">明阳的数字花园</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-base">
+        <a href="index.html" class="text-indigo-600 font-semibold">主页</a>
+        <a href="about.html" class="hover:text-indigo-600 transition-colors duration-200">关于我</a>
+        <a href="resources.html" class="hover:text-indigo-600 transition-colors duration-200">资源分享</a>
+      </nav>
+      <button class="md:hidden text-xl text-indigo-700 focus:outline-none"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+  <!-- 主体区域 -->
+  <main class="flex-1 flex flex-col md:flex-row max-w-5xl mx-auto w-full pt-20 pb-8 px-4 md:space-x-8">
+    <!-- 主内容区 -->
+    <section class="w-full md:w-7/12 lg:w-8/12 flex-shrink-0">
+      <!-- 标题与副标题 -->
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold mb-2 text-indigo-800 tracking-wide">明阳的数字花园</h1>
+          <h2 class="text-lg md:text-xl text-gray-500 tracking-widest">记录思考、分享热爱</h2>
+        </div>
+        <div class="avatar-container ml-6">
+          <img src="image/mingyang.jpg" 
+               alt="明阳的头像" 
+               class="avatar-image">
+        </div>
+      </div>
+      <!-- 当前日期 -->
+      <div id="date" class="inline-block mb-8 px-4 py-1 rounded-lg bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-base shadow-sm tracking-widest"></div>
+      <!-- 导航按钮 -->
+      <div class="grid grid-cols-2 gap-6 mb-8">
+       
+        <a href="resources.html" class="flex items-center px-6 py-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-indigo-50 group transform hover:-translate-y-1">
+          <i class="fa-solid fa-gift mr-4 text-pink-400 group-hover:text-pink-600 text-xl"></i>
+          <span class="text-lg font-semibold">🎁 资源分享</span>
+        </a>
+        <a href="resources.html" class="flex items-center px-6 py-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-indigo-50 group transform hover:-translate-y-1">
+          <i class="fa-solid fa-link mr-4 text-green-500 group-hover:text-green-700 text-xl"></i>
+          <span class="text-lg font-semibold">🔗 杂谈</span>
+        </a>
+        
+        <a href="about.html" class="flex items-center px-6 py-4 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-indigo-50 group transform hover:-translate-y-1">
+          <i class="fa-solid fa-lightbulb mr-4 text-purple-500 group-hover:text-purple-700 text-xl"></i>
+          <span class="text-lg font-semibold">💡 联系我</span>
+        </a>
+      </div>
+      <!-- 欢迎语 -->
+      <div class="mb-8 text-lg leading-relaxed text-gray-700">
+        欢迎来到我的数字花园。这里是明阳的精神角落，记录着日常的微光、偶尔的灵感与不灭的热爱。愿你在这里，感受到一个有故事的灵魂的温度。  
+      </div>
+      
+      <!-- 特色图片展示 -->
+      <div class="mb-8">
+        <img src="image/345.jpg" alt="明阳的数字花园特色展示" class="homepage-feature-image">
+      </div>
+      
+      <!-- 引用区块 -->
+      <blockquote class="border-l-4 border-indigo-300 bg-indigo-50 px-6 py-4 rounded-lg italic text-indigo-700 shadow-sm">
+        <span class="block text-base">“一切伟大都始于日常。”</span>
+      </blockquote>
+    </section>
+    <!-- 侧边小贴士区 -->
+    <aside class="w-full md:w-5/12 lg:w-4/12 mt-10 md:mt-0 md:pl-4 flex flex-col">
+      <div class="sticky top-28 bg-white rounded-2xl shadow-lg p-6 mb-8 border border-gray-100">
+        <div class="flex items-center mb-2 text-indigo-600 font-semibold text-base"><i class="fa-solid fa-pen-nib mr-2"></i>只言片语</div>
+        <div class="text-gray-700 text-sm leading-relaxed">22岁😎10年互联网校长🤠，今天也是想“退休”的一天。 🧘‍♂️ 但梦想还是要有的，万一实现了呢？茫茫人海，你不是一个人！如有需要咱们可以在人生旅途中相互帮扶，觉得内容不错，💞有商务合作或需要项目拉一把可以联系.✨
+          🛰️：DD6688810</div>
+      </div>
+      
+      <!-- 作者资源标题 -->
+      <div class="mb-4">
+        <h3 class="text-xl font-bold text-indigo-800 tracking-wide flex items-center">
+          <i class="fa-solid fa-star mr-2 text-indigo-600"></i>作者资源
+        </h3>
+        <div class="w-12 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mt-2"></div>
+      </div>
+      
+      <!-- 高级时尚杂志风格卡片轮播 -->
+      <div class="carousel-container bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+        <div class="carousel-wrapper">
+          <!-- 卡片1: 最速网页搭建 -->
+          <div class="carousel-card active" data-index="0">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-number">01</div>
+                <div class="card-category">技术教程</div>
+              </div>
+              <h3 class="card-title">最速网页搭建</h3>
+              <p class="card-description">从0开始带你做出属于你的网站！适合零基础同学。</p>
+              <a href="resources.html" class="card-button" onclick="window.location.href='resources.html'">
+                <span>立即学习</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-background"></div>
+          </div>
+
+          <!-- 卡片2: 个人IP打造 -->
+          <div class="carousel-card" data-index="1">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-number">02</div>
+                <div class="card-category">个人成长</div>
+              </div>
+              <h3 class="card-title">个人IP打造与自媒体成长课</h3>
+              <p class="card-description">帮你从"没人看"到"有人找"！打造影响力从这里开始。</p>
+              <a href="resources.html" class="card-button" onclick="window.location.href='resources.html'">
+                <span>了解课程</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-background"></div>
+          </div>
+
+          <!-- 卡片3: 财富自由真实纪录 -->
+          <div class="carousel-card" data-index="2">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-number">03</div>
+                <div class="card-category">财富自由</div>
+              </div>
+              <h3 class="card-title">财富自由真实纪录</h3>
+              <p class="card-description">记录我如何从副业赚钱到打造多个收入来源的过程。</p>
+              <a href="resources.html" class="card-button" onclick="window.location.href='resources.html'">
+                <span>看看我怎么做</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-background"></div>
+          </div>
+
+          <!-- 卡片4: 加入私密小圈 -->
+          <div class="carousel-card" data-index="3">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-number">04</div>
+                <div class="card-category">社群</div>
+              </div>
+              <h3 class="card-title">加入我的私密小圈</h3>
+              <p class="card-description">和我一起学习/搞钱/成长，干货+陪伴一起走。</p>
+              <a href="resources.html" class="card-button" onclick="window.location.href='resources.html'">
+                <span>扫码加入</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-background"></div>
+          </div>
+        </div>
+        
+        <!-- 轮播指示器 -->
+        <div class="carousel-indicators">
+          <button class="indicator active" data-index="0"></button>
+          <button class="indicator" data-index="1"></button>
+          <button class="indicator" data-index="2"></button>
+          <button class="indicator" data-index="3"></button>
+        </div>
+        
+        <!-- 轮播控制按钮 -->
+        <button class="carousel-control prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="carousel-control next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </aside>
+  </main>
+  <!-- 页脚 -->
+  <footer class="w-full text-center py-8 text-gray-400 text-sm mt-auto bg-white border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <!-- 社交媒体链接 -->
+      <div class="flex justify-center items-center space-x-6 mb-4">
+        <a href="#" class="social-link group">
+          <i class="fab fa-twitter text-xl text-gray-400 group-hover:text-blue-400 transition-colors duration-300"></i>
+          <span class="sr-only">Twitter</span>
+        </a>
+        <a href="#" class="social-link group">
+          <i class="fab fa-github text-xl text-gray-400 group-hover:text-gray-800 transition-colors duration-300"></i>
+          <span class="sr-only">GitHub</span>
+        </a>
+        <a href="mailto:contact@example.com" class="social-link group">
+          <i class="fas fa-envelope text-xl text-gray-400 group-hover:text-red-400 transition-colors duration-300"></i>
+          <span class="sr-only">Email</span>
+        </a>
+      </div>
+      <!-- 版权信息 -->
+      <div class="text-gray-500">
+        © 2024 明阳 · 数字花园
+      </div>
+    </div>
+  </footer>
+  <script>
+    // 日期显示
+    function formatDate(date) {
+      const days = ['日','一','二','三','四','五','六'];
+      return `${date.getFullYear()} 年 ${date.getMonth()+1} 月 ${date.getDate()} 日 · 星期${days[date.getDay()]}`;
+    }
+    document.getElementById('date').textContent = formatDate(new Date());
+
+    // 轮播功能
+    class Carousel {
+      constructor() {
+        this.currentIndex = 0;
+        this.cards = document.querySelectorAll('.carousel-card');
+        this.indicators = document.querySelectorAll('.indicator');
+        this.prevBtn = document.querySelector('.carousel-control.prev');
+        this.nextBtn = document.querySelector('.carousel-control.next');
+        this.totalCards = this.cards.length;
+        
+        this.init();
+      }
+      
+      init() {
+        this.bindEvents();
+        this.startAutoPlay();
+      }
+      
+      bindEvents() {
+        // 指示器点击事件
+        this.indicators.forEach((indicator, index) => {
+          indicator.addEventListener('click', () => {
+            this.goToSlide(index);
+          });
+        });
+        
+        // 控制按钮事件
+        this.prevBtn.addEventListener('click', () => {
+          this.prevSlide();
+        });
+        
+        this.nextBtn.addEventListener('click', () => {
+          this.nextSlide();
+        });
+        
+        // 鼠标悬停暂停自动播放
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+          this.stopAutoPlay();
+        });
+        
+        carouselContainer.addEventListener('mouseleave', () => {
+          this.startAutoPlay();
+        });
+      }
+      
+      goToSlide(index) {
+        // 移除当前活动状态
+        this.cards[this.currentIndex].classList.remove('active');
+        this.indicators[this.currentIndex].classList.remove('active');
+        
+        // 设置新的活动状态
+        this.currentIndex = index;
+        this.cards[this.currentIndex].classList.add('active');
+        this.indicators[this.currentIndex].classList.add('active');
+      }
+      
+      nextSlide() {
+        const nextIndex = (this.currentIndex + 1) % this.totalCards;
+        this.goToSlide(nextIndex);
+      }
+      
+      prevSlide() {
+        const prevIndex = (this.currentIndex - 1 + this.totalCards) % this.totalCards;
+        this.goToSlide(prevIndex);
+      }
+      
+      startAutoPlay() {
+        this.autoPlayInterval = setInterval(() => {
+          this.nextSlide();
+        }, 4000); // 4秒切换一次
+      }
+      
+      stopAutoPlay() {
+        if (this.autoPlayInterval) {
+          clearInterval(this.autoPlayInterval);
+        }
+      }
+    }
+    
+    // 初始化轮播
+    document.addEventListener('DOMContentLoaded', () => {
+      new Carousel();
+    });
+  </script>
+</body>
+</html> 

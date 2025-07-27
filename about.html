@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我 - 明阳的数字花园</title>
+  <!-- Tailwind CSS v2.2.19 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome v6.0.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Noto Serif SC 字体 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about-styles.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-h-screen">
+  <!-- 顶部导航栏 -->
+  <header class="fixed top-0 left-0 w-full z-30 bg-white bg-opacity-90 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center space-x-2">
+        <span class="text-2xl font-bold tracking-wide text-indigo-700">明阳的数字花园</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-base">
+        <a href="index.html" class="hover:text-indigo-600 transition-colors duration-200">主页</a>
+        <a href="about.html" class="text-indigo-600 font-semibold">关于我</a>
+        <a href="resources.html" class="hover:text-indigo-600 transition-colors duration-200">资源分享</a>
+      </nav>
+      <button class="md:hidden text-xl text-indigo-700 focus:outline-none"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- 主体内容 -->
+  <main class="pt-20 pb-8">
+    <!-- 英雄区域 -->
+    <section class="hero-section">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="hero-avatar">
+          <img src="image/mingyang.jpg" alt="常明阳" class="hero-image">
+          <div class="hero-glow"></div>
+        </div>
+        <h1 class="hero-title">明阳</h1>
+        <p class="hero-subtitle">穿过人群时，不要盯着面前的人看。相反，要把目光越过他们，看向你想去的方向，大多数人会在不知不觉中为你让出空间。</p>
+        <div class="hero-quote">
+          <i class="fa-solid fa-quote-left text-4xl text-indigo-300 mb-4"></i>
+          <p class="text-xl text-gray-600 italic">人生是马拉松，不比起点，比谁能坚持到底</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 故事时间线 -->
+    <section class="timeline-section">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="section-title">我的故事</h2>
+        
+        <!-- 时间线容器 -->
+        <div class="timeline-container">
+          <!-- 时间线项目1 -->
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">高考与起点</h3>
+              <p class="timeline-text">上一段人生高考英语110分，学的是计算机网络维护与安全管理。但我始终相信：<span class="highlight">命运不是成绩册，它从不定义人的极限。</span></p>
+            </div>
+          </div>
+
+          <!-- 时间线项目2 -->
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-road"></i>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">尝试与探索</h3>
+              <p class="timeline-text">我试过很多路：做短视频、运营本地号、搞电商、尝试知识付费，也帮人管理直播间、做客服发链接……每一次都满怀希望，每一次也都经历失败。但我始终没有停下折腾的脚步。</p>
+              <div class="timeline-quote">——人生这条路你怎么走都是对的</div>
+            </div>
+          </div>
+
+          <!-- 时间线项目3 -->
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">技术突破</h3>
+              <p class="timeline-text">为了完成一个毕业设计，我花了几百个小时自学区块链，从零搭建Truffle、Ganache、MetaMask，写出了自己人生中第一个真正能运行的商品支付系统。对别人来说那是作业，对我来说，那是"我可以靠自己做到"的第一道证明。</p>
+              <div class="timeline-quote">世上无难事，只要钻研一定可以磨出来</div>
+            </div>
+          </div>
+
+          <!-- 时间线项目4 -->
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-chalkboard-teacher"></i>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">教学与成长</h3>
+              <p class="timeline-text">当过线上英语老师，也带过人做副业。也曾在深夜里迷茫焦虑，刷短视频逃避现实，但最终，我咬牙挺了过来。</p>
+              <div class="timeline-quote">无论做任何事 三个月内必有变化，世界上唯一不变的定律就是——万物都在改变</div>
+            </div>
+          </div>
+
+          <!-- 时间线项目5 -->
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">自媒体创业</h3>
+              <p class="timeline-text">没有启动资金，也没有经验，只凭一股"电商也能养活自己"的信念。我开始做内容运营、模仿风格、剪视频、写脚本，从一个对网页一无所知的学生，成长为一个敢上镜讲解项目的自媒体小创客。</p>
+              <div class="timeline-quote">从0开始总是会有困难，但真正困难的是没有一颗战胜困难的心</div>
+            </div>
+          </div>
+
+          <!-- 时间线项目6 -->
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">现在与未来</h3>
+              <p class="timeline-text">我没有背景，也不是天赋型选手，一路走来靠的只是四个字：<span class="highlight">不放弃</span>。</p>
+              <p class="timeline-text">现在的我，正在把自媒体、电商和个人成长融合出一条自己的路。也许还不算成功，但我已经不再迷茫，方向清晰，脚下有路。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心信念 -->
+    <section class="beliefs-section">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="section-title">我想用我的经历告诉你</h2>
+        <div class="beliefs-grid">
+          <div class="belief-card" data-aos="zoom-in">
+            <div class="belief-icon">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3 class="belief-title">别怕失败</h3>
+            <p class="belief-text">你看，我就是一路跌跌撞撞，一次次爬起来，失败才是人生的常态。</p>
+          </div>
+          
+          <div class="belief-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="belief-icon">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h3 class="belief-title">坚持成长</h3>
+            <p class="belief-text">无论做任何事，三个月内必有变化。世界上唯一不变的定律就是——万物都在改变。</p>
+          </div>
+          
+          <div class="belief-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="belief-icon">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <h3 class="belief-title">方向清晰</h3>
+            <p class="belief-text">也许还不算成功，但我已经不再迷茫，方向清晰，脚下有路。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="contact-section">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="section-title">联系我</h2>
+        <div class="contact-grid">
+          <a href="#" class="contact-item">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+          <a href="#" class="contact-item">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:contact@example.com" class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="w-full text-center py-8 text-gray-400 text-sm mt-auto bg-white border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-gray-500">
+        © 2024 常明阳 · 数字花园
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 滚动动画
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('[data-aos]');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('aos-animate');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      elements.forEach(el => observer.observe(el));
+    }
+
+    // 页面加载完成后初始化
+    document.addEventListener('DOMContentLoaded', () => {
+      animateOnScroll();
+    });
+  </script>
+</body>
+</html> 
